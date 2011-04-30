@@ -3,14 +3,15 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:include href="../utilities/master.xsl"/>
-<xsl:include href="../utilities/latest-articles.xsl"/>
+<xsl:include href="../utilities/search.xsl"/>
 
 <xsl:template match="data">
  <div id="content">
   <p><xsl:value-of select="$page-title"/></p>
+  <xsl:apply-templates select="search"/>
  </div>
  <div id="sidebar">
-  <xsl:apply-templates select="latest-articles"/>
+  <p>sidebar</p>
  </div>
 </xsl:template>
 
